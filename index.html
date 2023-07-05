@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+           <div class="four columns">
+               
+               <div class="logo"> <img src="img/logo.png" ></div>
+             </div>
+          
+            <div class="two columns u-pull-right">
+                <ul>
+                    <li class="submenu">
+                        <div class="carro">    <div id="numeroCant"></div> <img src="img/carrito.svg"id="img-carrito"> </div>
+                          
+                            <div id="carrito">
+                                    
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th>Total</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody> 
+                                       
+                                    </table>
+                                   <p  class="u-full-width" id="descuento"> DESCUENTO DEL 15% DE SU COMPRA POR LLEVAR 3 PRODUCTOS IGUALES</p>
+                                    <a href="#" onclick="vaciarContador();" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                   
+                                    
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    </header>
+
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                    <div class="six columns">
+                        <div class="contenido-hero">
+                                <h2>ULTIMAS NOVEDADES</h2>
+                                <p>DESCUENTOS DE HASTA 40%</p>
+                        </div>
+                    </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>Perifericos <br>
+                       Teclados, auriculares, mouse.</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p>Microprocesadores <br>
+                        AMD, Intel.</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p>Consolas de videojuegos<br>
+                            PS4, PS5</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-producto" class="container">
+        <h1 id="encabezado" class="encabezado">Poductos destacados</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/monitor.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>MONITOR 24" PHILIPS 241V8L/77 FHD VGA HDMI</h4>
+                        <p>¡12 cuotas de $5.525,33!</p>
+                        <p class="precio">$59.440,00  <span class="u-pull-right ">$ <span class="u-pull-right">41.440.00</span></span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/kit.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>KIT CORSAIR TECLADO K55 RGB PRO + MOUSE HARPOON RGB PRO</h4>
+                            <p>¡12 cuotas de $1.554,40!</p>
+                            <p class="precio">$12.823,00  <span class="u-pull-right ">$<span class="u-pull-right ">11.658.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/micr.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>MICRO AMD RYZEN 3 4100 S/VIDEO BULK</h4>
+                            <p>¡12 cuotas de $3.146,67!</p>
+                            <p class="precio">$25.960,00  <span class="u-pull-right ">$<span class="u-pull-right ">23.600.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/pc.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>PC INTEL I5 10400+H410+8GB+240GB SSD+KIT</h4>
+                        <p>¡12 cuotas de $11.426,67!</p>
+                        <p class="precio">$94.270,00 <span class="u-pull-right ">$<span class="u-pull-right ">85.700.00</span></span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/auris.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>AURICULARES HP HYPERX CLOUD II BLACK/RED 4P5M0AA</h4>
+                            <p>¡12 cuotas de $2.999,87!</p>
+                            <p class="precio">$24.749,00  <span class="u-pull-right ">$<span class="u-pull-right ">22.499.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/note.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>NOTEBOOK CX 14" A9-9400 4GB 64GB W10P</h4>
+                            <p>¡12 cuotas de $9.520,27!</p>
+                            <p class="precio">$78.542,00  <span class="u-pull-right ">$<span class="u-pull-right ">71.402.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="img/amd.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>PC AMD RYZEN 5 5600G+A520+16GB+480GB</h4>
+                        <p>¡12 cuotas de $12.926,67!</p>
+                        <p class="precio">$106.645,00  <span class="u-pull-right ">$<span class="u-pull-right ">96.950.00</span></span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/lenovo.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>NOTEBOOK LENOVO 15.6" V15 I5-1135G7 8GB 256GB FREE</h4>
+                            <p>¡12 cuotas de $23.373,33!</p>
+                            <p class="precio">$192.830,00  <span class="u-pull-right ">$<span class="u-pull-right ">175.300.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="img/microf.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>MICROFONO HP HYPERX SOLOCAST BLACK PC PS4</h4>
+                            <p>¡12 cuotas de $1.174,67!</p>                        
+                            <p class="precio">$9.691,00  <span class="u-pull-right ">$<span class="u-pull-right ">8.810.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="img/tecladox.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>TECLADO HP HYPERX ALLOY ORIGINS CORE TKL RED SWITCH ENGLISH 4P5P3AA</h4>
+                            <p>¡12 cuotas de $2.301,60!</p>
+                            <p class="precio">$18.988,00  <span class="u-pull-right ">$<span class="u-pull-right ">17.262.00</span></span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/mouse-logi.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>MOUSE LOGITECH G PRO WIRELESS BLACK 910-005271</h4>
+                                <p>¡12 cuotas de $2.560,00!</p>
+                                <p class="precio">$21.120,00  <span class="u-pull-right ">$<span class="u-pull-right ">19.200.00</span></span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="img/monitor2.jpg" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>MONITOR 19" DAEWOO LED HD 60HZ VGA HDMI</h4>
+                                <p>¡12 cuotas de $3.660,13!</p>
+                                <p class="precio">$30.196,00 <span class="u-pull-right ">$<span class="u-pull-right ">27.451.00</span></span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+            </div> <!--.row-->
+    </div>  
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns">
+                            <nav id="principal" class="menu">
+                                <a class="enlace" href="#">Para tu Negocio</a>
+                                <a class="enlace" href="#">Conviertete en Instructor</a>
+                                <a class="enlace" href="#">Aplicaciones Móviles</a>
+                                <a class="enlace" href="#">Soporte</a>
+                                <a class="enlace" href="#">Temas</a>
+                            </nav>
+                    </div>
+                    <div class="four columns">
+                            <nav id="secundaria" class="menu">
+                                <a class="enlace" href="#">¿Quienes Somos?</a>
+                                <a class="enlace" href="#">Empleo</a>
+                                <a class="enlace" href="#">Blog</a>
+                            </nav>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--script src="js/app.js"></scrit-->
+    <script src="js/app.js"></script>
+</body>
+</html>
